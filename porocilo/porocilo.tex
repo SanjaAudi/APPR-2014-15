@@ -9,26 +9,21 @@
 \begin{document}
 \title{Poročilo pri predmetu \\
 Analiza podatkov s programom R}
-\author{Študent FMF}
+\author{Milojević Sanja}
 \maketitle
 
-\section{Po tem ko sem namestila programe na svoj računalnik sem se odločila za temo. Na internetu sem poiskala željene podatke in jih pripela v README.md z opisi za kaj jih bom potrebovala. Izbrana tema je prodaja avtomobilov znamke Audi.}
+\section{1. faza - IZBIRA TEME}
+Po tem ko sem namestila programe na svoj računalnik sem se odločila za temo. Na internetu sem poiskala željene podatke in jih pripela v \verb|README.md| z opisi za kaj jih bom potrebovala. Izbrana tema je prodaja avtomobilov znamke Audi.
 
-\section{S tabelami, ki sem jih našla v 1. fazi bom izvedela kakšne so številke prodaje Audi avtomobilov v letih od 1996 do 2006. Najprej sem tabele v excelu pretvorila v CSV obliko, ki sem jih nato uvozila v R-studiu. Iz datoteke projekt.r v tem delu kličem samo datoteko uvod, katera kliče datoteko konzola.r, ki kliče tabele iz datoteke readcsv.r. Naredila sem še novo datoteko grafi.r v kateri bom za vsako leto posebaj prikazala Audi prodajo, Število zaposlenih v Audi tovarnah za leta od 2000 do 2004(razen 2001 za kar nimam podatka). Za število izdelanih avtomobilov znamke Audi glede na tip sem želela narediti tortni diagram s podatki samo posameznih modelov(brez podmodelov), za najboljšo primerjavo katerih je izdelanih največ v posameznem letu,pa žal ne znam spisati kode).}
+\section{2. faza: OBDELAVA, UVOZ IN ČIŠČENJE PODATKOV}
+S tabelami, ki sem jih našla v 1. fazi bom izvedela kakšne so številke prodaje Audi avtomobilov v letih od 1996 do 2006. Najprej sem tabele v excelu pretvorila v CSV obliko, ki sem jih nato uvozila v R-studiu. Iz datoteke \verb|projekt.r| v tem delu kličem samo datoteko uvod, katera kliče datoteko konzola.r, ki kliče tabele iz datoteke readcsv.r (tabele).
+Naredila sem še novo datoteko \verb|grafi.r| v kateri bom za leta od 1996 do 2006 prikazala Audi prodajo, Število zaposlenih v Audi tovarnah za leta od 2000 do 2004(razen 2001 za kar nimam podatka). Za število izdelanih avtomobilov znamke Audi glede na tip sem želela narediti tortni diagram s podatki samo posameznih modelov (brez podmodelov), za najboljšo primerjavo katerih je izdelanih največ v posameznem letu,pa žal ne znam spisati kode).
+
+17.12.2014 : Po navodilih bom popravila stvari ki ne delujejo ali ne izgledajo kot bi morale. Torej popravila sem izgled poročila in uvoz grafa (iz 10 grafov je nastal samo en, tako da je bilo preveč uvoženih). Še nekaj si želim popraviti a bom to naredila naknadno.
 
 \section{Analiza in vizualizacija podatkov}
 
-\includegraphics[width=\textwidth]{C:/Users/SANJA/Documents/APPR/AUDI PROJEKT/APPR-2014-15/slike/Audi_trgi_1996_1997.pdf}
-\includegraphics[width=\textwidth]{C:/Users/SANJA/Documents/APPR/AUDI PROJEKT/APPR-2014-15/slike/Audi_trgi_1998.pdf}
-\includegraphics[width=\textwidth]{C:/Users/SANJA/Documents/APPR/AUDI PROJEKT/APPR-2014-15/slike/Audi_trgi_1999.pdf}
-\includegraphics[width=\textwidth]{C:/Users/SANJA/Documents/APPR/AUDI PROJEKT/APPR-2014-15/slike/Audi_trgi_2000.pdf}
-\includegraphics[width=\textwidth]{C:/Users/SANJA/Documents/APPR/AUDI PROJEKT/APPR-2014-15/slike/Audi_trgi_2001.pdf}
-\includegraphics[width=\textwidth]{C:/Users/SANJA/Documents/APPR/AUDI PROJEKT/APPR-2014-15/slike/Audi_trgi_2002.pdf}
-\includegraphics[width=\textwidth]{C:/Users/SANJA/Documents/APPR/AUDI PROJEKT/APPR-2014-15/slike/Audi_trgi_2003.pdf}
-\includegraphics[width=\textwidth]{C:/Users/SANJA/Documents/APPR/AUDI PROJEKT/APPR-2014-15/slike/Audi_trgi_2004.pdf}
-\includegraphics[width=\textwidth]{C:/Users/SANJA/Documents/APPR/AUDI PROJEKT/APPR-2014-15/slike/Audi_trgi_2005.pdf}
-\includegraphics[width=\textwidth]{C:/Users/SANJA/Documents/APPR/AUDI PROJEKT/APPR-2014-15/slike/Audi_trgi_2006.pdf}
-\includegraphics[width=\textwidth]{C:/Users/SANJA/Documents/APPR/AUDI PROJEKT/APPR-2014-15/slike/Audi_zaposleni_1996.pdf}
+\includegraphics[width=\textwidth]{C:/Users/SANJA/Documents/APPR/AUDI PROJEKT/APPR-2014-15/slike/Audi_trgi.pdf}
 \includegraphics[width=\textwidth]{C:/Users/SANJA/Documents/APPR/AUDI PROJEKT/APPR-2014-15/slike/Audi_zaposleni_2000.pdf}
 \includegraphics[width=\textwidth]{C:/Users/SANJA/Documents/APPR/AUDI PROJEKT/APPR-2014-15/slike/Audi_zaposleni_2002.pdf}
 \includegraphics[width=\textwidth]{C:/Users/SANJA/Documents/APPR/AUDI PROJEKT/APPR-2014-15/slike/Audi_zaposleni_2003.pdf}
