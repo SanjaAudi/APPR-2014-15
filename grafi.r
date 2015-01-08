@@ -57,7 +57,7 @@ f1 <- apply(AudiEmployees,1,function(x) x[1])
 pdf("slike/Audi_zaposleni_2000.pdf")
 vrstice <- rownames(AudiEmployees)
 vrstice[2] <- "Audi AG\nincl. Others"
-vrstice[7] <- "Cosworth\nTechnology
+vrstice[7] <- "Cosworth\nTechnology"
 barplot(f1/1000,main='Zaposleni v Audi tovarnah 2000',
         ylab='Število zaposlenih (×1000)', col=c("pink"),
         names.arg = vrstice, las=2,cex.names=0.6)
@@ -87,7 +87,7 @@ dev.off()
 # pdf('slike/Audi_modeli_1996.pdf')
 # pie(AudiProduction, labels = c('A3','A4','A5','A6', 'A8', 'TT', 'Lamborghini'), col=c('magenta4','lawngreen','red3','deepskyblue2'), main ='Zaposleni v Audi tovarnah')
 # dev.off()
-
+pdf("slike/Audi_modeli.pdf")
 vrstice <- grep("Total|Threreof", rownames(AudiProduction),
                 ignore.case=TRUE, invert=TRUE)
 izbor <- AudiProduction[vrstice,]
