@@ -1,9 +1,11 @@
 g1 <- apply(AudiByMarkets,1,function(y) y[1])
 g1 <- g1[!is.na(g1)]
 pdf("slike/Audi_trgi.pdf")
-barplot(apply(AudiByMarkets, 1, c)/1000, beside = TRUE,
-        las=2, legend=1996:2006, args.legend=c(x="top"),
-        col=rainbow(11), cex.names=0.6)
+barplot(as.matrix(AudiByMarkets[-15,])/1000, beside = TRUE,
+        las=2, names.arg=1996:2006,
+        col=rainbow(14), cex.names=0.6, ylim = c(0, 400))
+legend("topleft", legend = row.names(AudiByMarkets)[1:14], cex=0.6,
+       fill=rainbow(14))
 dev.off()
 # barplot(g1/1000,main='Audi prodaja po trgih 1996 (enako za 1997)', ylab='Število prodanih avtomobilov (×1000)', col=c("pink"),las=2,cex.names=0.6)
 # dev.off()
@@ -95,3 +97,4 @@ modeli <- c('A3','A4','A5','A6','A8','TT','Lamborghini')
 vsote <- sapply(modeli,
                 function(x) sum(izbor[grep(x, rownames(izbor)),11], na.rm = TRUE))
 pie(vsote)
+dev.off()
