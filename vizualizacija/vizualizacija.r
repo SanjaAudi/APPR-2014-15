@@ -13,8 +13,8 @@ row.names(AudiByMarkets)[3:4] <- c("United Kingdom", "United States")
 
 evropa <- svet[svet$continent == "Europe",]
 rest <- c("United States", "China", "Japan")
-m <- match(row.names(AudiByMarkets), svet$name)
-n <- match(rest, svet$name)
+imenaevropa <- match(row.names(AudiByMarkets), svet$name)
+imenasvet <- match(rest, svet$name)
 koordinate <- coordinates(svet)
 rownames(koordinate) <- svet$name
 imena <- as.character(svet$name)
@@ -43,7 +43,7 @@ n = 100
 barve = cm.colors(n)[n:1]
 barve.svet <- barve[1+(n-1)*(AudiByMarkets$X2001-min.2001)/(max.2001-min.2001)]
 plot(svet, col = barve.svet[match(svet$name, row.names(AudiByMarkets))])
-#text(koordinate[n,], labels = rest, cex = 0.5)
+text(koordinate[imenasvet,], labels = rest, cex = 0.5)
 title("Prodaja v svetu leta 2001")
 
 k <- 5
@@ -56,7 +56,7 @@ pdf("slike/zemljevid_evropa_2001.pdf")
 evropa <- svet[svet$continent == "Europe",]
 plot(evropa, col = barve.svet[match(evropa$name, row.names(AudiByMarkets))],
      xlim = c(-20, 20), ylim = c(33, 73))
-text(koordinate[m,], labels = imena[m], cex = 0.5)
+text(koordinate[imenaevropa,], labels = imena[imenaevropa], cex = 0.5)
 title("Prodaja v Evropi leta 2001")
 
 k <- 5
@@ -78,6 +78,7 @@ n = 100
 barve = rainbow(n)[n:1]
 barve.svet <- barve[1+(n-1)*(AudiByMarkets$X2002-min.2002)/(max.2002-min.2002)]
 plot(svet, col = barve.svet[match(svet$name, row.names(AudiByMarkets))])
+text(koordinate[imenasvet,], labels = rest, cex = 0.5)
 title("Prodaja v svetu leta 2002")
 k <- 5
 koraki <- 1:k
@@ -89,7 +90,8 @@ pdf("slike/zemljevid_evropa_2002.pdf")
 evropa <- svet[svet$continent == "Europe",]
 plot(evropa, col = barve.svet[match(evropa$name, row.names(AudiByMarkets))],
      xlim = c(-20, 20), ylim = c(33, 73))
-text(koordinate[m,], labels = imena[m], cex = 0.5)
+mm <- imenaevropa[!is.na(AudiByMarkets$X2002)]
+text(koordinate[mm,], labels = imena[mm], cex = 0.5)
 title("Prodaja v Evropi leta 2002")
 
 k <- 5
@@ -111,6 +113,7 @@ n = 100
 barve = terrain.colors(n)[n:1]
 barve.svet <- barve[1+(n-1)*(AudiByMarkets$X2003-min.2003)/(max.2003-min.2003)]
 plot(svet, col = barve.svet[match(svet$name, row.names(AudiByMarkets))])
+text(koordinate[imenasvet,], labels = rest, cex = 0.5)
 title("Prodaja v svetu leta 2003")
 k <- 5
 koraki <- 1:k
@@ -122,7 +125,8 @@ pdf("slike/zemljevid_evropa_2003.pdf")
 evropa <- svet[svet$continent == "Europe",]
 plot(evropa, col = barve.svet[match(evropa$name, row.names(AudiByMarkets))],
      xlim = c(-20, 20), ylim = c(33, 73))
-text(koordinate[m,], labels = imena[m], cex = 0.5)
+mm <- imenaevropa[!is.na(AudiByMarkets$X2003)]
+text(koordinate[mm,], labels = imena[mm], cex = 0.5)
 title("Prodaja v Evropi leta 2003")
 
 k <- 5
@@ -144,6 +148,7 @@ n = 100
 barve = cm.colors(n)[n:1]
 barve.svet <- barve[1+(n-1)*(AudiByMarkets$X2004-min.2004)/(max.2004-min.2004)]
 plot(svet, col = barve.svet[match(svet$name, row.names(AudiByMarkets))])
+text(koordinate[imenasvet,], labels = rest, cex = 0.5)
 title("Prodaja v svetu leta 2004")
 k <- 5
 koraki <- 1:k
@@ -155,7 +160,7 @@ pdf("slike/zemljevid_evropa_2004.pdf")
 evropa <- svet[svet$continent == "Europe",]
 plot(evropa, col = barve.svet[match(evropa$name, row.names(AudiByMarkets))],
      xlim = c(-20, 20), ylim = c(33, 73))
-text(koordinate[m,], labels = imena[m], cex = 0.5)
+text(koordinate[imenaevropa,], labels = imena[imenaevropa], cex = 0.5)
 title("Prodaja v Evropi leta 2004")
 
 k <- 5
@@ -177,6 +182,7 @@ n = 100
 barve = rainbow(n)[n:1]
 barve.svet <- barve[1+(n-1)*(AudiByMarkets$X2005-min.2005)/(max.2005-min.2005)]
 plot(svet, col = barve.svet[match(svet$name, row.names(AudiByMarkets))])
+text(koordinate[imenasvet,], labels = rest, cex = 0.5)
 title("Prodaja v svetu leta 2005")
 k <- 5
 koraki <- 1:k
@@ -188,7 +194,7 @@ pdf("slike/zemljevid_evropa_2005.pdf")
 evropa <- svet[svet$continent == "Europe",]
 plot(evropa, col = barve.svet[match(evropa$name, row.names(AudiByMarkets))],
      xlim = c(-20, 20), ylim = c(33, 73))
-text(koordinate[m,], labels = imena[m], cex = 0.5)
+text(koordinate[imenaevropa,], labels = imena[imenaevropa], cex = 0.5)
 title("Prodaja v Evropi leta 2005")
 
 k <- 5
@@ -210,6 +216,7 @@ n = 100
 barve = terrain.colors(n)[n:1]
 barve.svet <- barve[1+(n-1)*(AudiByMarkets$X2006-min.2006)/(max.2006-min.2006)]
 plot(svet, col = barve.svet[match(svet$name, row.names(AudiByMarkets))])
+text(koordinate[imenasvet,], labels = rest, cex = 0.5)
 title("Prodaja v svetu leta 2006")
 k <- 5
 koraki <- 1:k
@@ -221,7 +228,7 @@ pdf("slike/zemljevid_evropa_2006.pdf")
 evropa <- svet[svet$continent == "Europe",]
 plot(evropa, col = barve.svet[match(evropa$name, row.names(AudiByMarkets))],
      xlim = c(-20, 20), ylim = c(33, 73))
-text(koordinate[m,], labels = imena[m], cex = 0.5)
+text(koordinate[imenaevropa,], labels = imena[imenaevropa], cex = 0.5)
 title("Prodaja v Evropi leta 2006")
 
 k <- 5
