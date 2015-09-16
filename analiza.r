@@ -2,7 +2,7 @@ source("podatki2faza/konzola.r")
 source("grafi.r")
 
 g1 <- apply(AudiByMarkets,1,function(y) y[1])
-g1 <- g1[!is.na(g1)]
+g1 <- ag1[!is.na(g1)]
 
 pdf("slike/Auditrgianaliza.pdf")
 m <- as.matrix(AudiByMarkets[-15,])/1000

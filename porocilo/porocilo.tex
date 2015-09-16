@@ -22,10 +22,7 @@ Naredila sem še novo datoteko \verb|grafi.r| v kateri bom za leta od 1996 do 20
 17.12.2014 : Po navodilih bom popravila stvari ki ne delujejo ali ne izgledajo kot bi morale. Torej popravila sem izgled poročila in uvoz grafa (iz 10 grafov je nastal samo en, tako da je bilo preveč uvoženih). Še nekaj si želim popraviti a bom to naredila naknadno.
 
 \includegraphics[width=\textwidth]{../slike/Audi_trgi.pdf}
-\includegraphics[width=\textwidth]{../slike/Audi_zaposleni_2000.pdf}
-\includegraphics[width=\textwidth]{../slike/Audi_zaposleni_2002.pdf}
-\includegraphics[width=\textwidth]{../slike/Audi_zaposleni_2003.pdf}
-\includegraphics[width=\textwidth]{../slike/Audi_zaposleni_2004.pdf}
+\includegraphics[width=\textwidth]{../slike/Audi_zaposleni.pdf}
 
 \section{ANALIZA IN VIZUALIZACIJA PODATKOV}
 S pomočjo profesorja narisan zemljevid sveta in potem še zemljevid Evrope na katerima je prikazana audi prodaja po trgih iz CSV datoteke AudiByMarkets.csv za leto 2006. Doma sem potem uredila in naredila enake zemljevide za ostala leta. Na zemljevidu se barve stopnjujejo od svetlejše k temnejši kot se stopnjuje prodaja (več prodanih avtomobilov - temnejša barva). Če sem videla da se številke v dveh letih nekoliko razlikujejo vseeno pa gredo številke prodaj v državah po istem vrstnem redu sem te dve leti dala v en zemljevid. Imam še eno težavo - ne znam vključiti imen držav v zemljevid. Kar sem želela spremeniti glede grafov v prejšnji fazi sem naredila tu - na legendo dala države, na x os pa letnice, tako da se podatki dajo primerjati za države.
@@ -47,6 +44,8 @@ S pomočjo profesorja narisan zemljevid sveta in potem še zemljevid Evrope na k
 \includegraphics[width=\textwidth]{../slike/zemljevid_evropa_2006.pdf}
 
 \section{NAPREDNA ANALIZA PODATKOV}
+
+17.9.2015: Popravila sem grafe, ki kažejo število zaposlenih v tovarnah od leta 2000 do leta 2005. Za vsako leto sem imela poseben graf kar pa ni bilo najbolj pregledno tako da sem vse podatke prikazala na enem. Napisala bom še funkcijo ki tam kjer ni podatka v tabeli vzame enako vrednost kot leto prej/potem ali pa da tam črte ni. Trenutno sem namestila da "NA" vrednosti enači s številom 0, kar pa mi naredi graf nepregleden. Naredila sem tudi grafa ki prikazujeta prodajo avtomobilov v različnih državah in pa produkcijo posameznih modelov s pomočjo katerih bom napovedala podatke za prihodnost po metodi najmanjših kvadratov. Za 3. fazo bom še ugotovila zakaj mi zemljevidov ne prikaže v pdf datoteki.
 
 %\includegraphics{../slike/naselja.pdf}
 
