@@ -20,9 +20,10 @@ Po tem ko sem namestila programe na svoj računalnik sem se odločila za temo. N
 S tabelami, ki sem jih našla v 1. fazi bom izvedela kakšne so številke prodaje Audi avtomobilov v letih od 1996 do 2006. Najprej sem tabele v excelu pretvorila v CSV obliko, ki sem jih nato uvozila v R-studiu. Iz datoteke \verb|projekt.r| v tem delu kličem samo datoteko uvod, katera kliče datoteko konzola.r, ki kliče tabele iz datoteke readcsv.r (tabele).
 Naredila sem še novo datoteko \verb|grafi.r| v kateri bom za leta od 1996 do 2006 prikazala Audi prodajo, Število zaposlenih v Audi tovarnah za leta od 2000 do 2004(razen 2001 za kar nimam podatka). Za število izdelanih avtomobilov znamke Audi glede na tip sem želela narediti tortni diagram s podatki samo posameznih modelov (brez podmodelov), za najboljšo primerjavo katerih je izdelanih največ v posameznem letu,pa žal ne znam spisati kode).\\
 17.12.2014 : Po navodilih bom popravila stvari ki ne delujejo ali ne izgledajo kot bi morale. Torej popravila sem izgled poročila in uvoz grafa (iz 10 grafov je nastal samo en, tako da je bilo preveč uvoženih). Še nekaj si želim popraviti a bom to naredila naknadno.
+Pri pregledu trgov sem naredila še en graf poleg stolpičastega in ga vključila v pdf. Dodala sem še graf izdelave Audijev po modelih in pa tortni diagram, iz katerega je razvidno da se največ proizvede model A4.
 
 \includegraphics[width=\textwidth]{../slike/Audi_trgi.pdf}
-\includegraphics[width=\textwidth]{../slike/Audi_zaposleni.pdf}
+\includegraphics[width=\textwidth]{../slike/Audi_modeli.pdf}
 
 \section{ANALIZA IN VIZUALIZACIJA PODATKOV}
 S pomočjo profesorja narisan zemljevid sveta in potem še zemljevid Evrope na katerima je prikazana audi prodaja po trgih iz CSV datoteke AudiByMarkets.csv za leto 2006. Doma sem potem uredila in naredila enake zemljevide za ostala leta. Na zemljevidu se barve stopnjujejo od svetlejše k temnejši kot se stopnjuje prodaja (več prodanih avtomobilov - temnejša barva). Če sem videla da se številke v dveh letih nekoliko razlikujejo vseeno pa gredo številke prodaj v državah po istem vrstnem redu sem te dve leti dala v en zemljevid. Imam še eno težavo - ne znam vključiti imen držav v zemljevid. Kar sem želela spremeniti glede grafov v prejšnji fazi sem naredila tu - na legendo dala države, na x os pa letnice, tako da se podatki dajo primerjati za države.
@@ -30,23 +31,19 @@ S pomočjo profesorja narisan zemljevid sveta in potem še zemljevid Evrope na k
 19.1.2015: Odstranila sem zemljevide do leta 2001, ker imam za leta od 1996 do 2000 podatke za samo 4 od 13 držav. Enako kot na zemljevide Evrope sem naredila legende tudi na zemljevide sveta. Zamenjala sem barve na zemljevidih, saj sem ugotovila da pri "heat colors", katero sem prvotno uporabila ne pobarva vseh držav za katere imam podatek. Na zemljevide sem dodala imena držav. 
 
 
-\includegraphics[width=\textwidth]{../slike/zemljevid_prodaja_2001.pdf}
-\includegraphics[width=\textwidth]{../slike/zemljevid_evropa_2001.pdf}
-\includegraphics[width=\textwidth]{../slike/zemljevid_prodaja_2002.pdf}
-\includegraphics[width=\textwidth]{../slike/zemljevid_evropa_2002.pdf}
-\includegraphics[width=\textwidth]{../slike/zemljevid_prodaja_2003.pdf}
-\includegraphics[width=\textwidth]{../slike/zemljevid_evropa_2003.pdf}
-\includegraphics[width=\textwidth]{../slike/zemljevid_prodaja_2004.pdf}
-\includegraphics[width=\textwidth]{../slike/zemljevid_evropa_2004.pdf}
-\includegraphics[width=\textwidth]{../slike/zemljevid_prodaja_2005.pdf}
-\includegraphics[width=\textwidth]{../slike/zemljevid_evropa_2005.pdf}
-\includegraphics[width=\textwidth]{../slike/zemljevid_prodaja_2006.pdf}
-\includegraphics[width=\textwidth]{../slike/zemljevid_evropa_2006.pdf}
+\includegraphics[width=\textwidth]{../slike/zemljevidiprodaja.pdf}
+
+Kot vidimo Nemčija s prodajo močno izstopa, ne samo v Evropi ampak v celem svetu, kar je razumljivo za domačo znamko.
+
 
 \section{NAPREDNA ANALIZA PODATKOV}
 
 17.9.2015: Popravila sem grafe, ki kažejo število zaposlenih v tovarnah od leta 2000 do leta 2005. Za vsako leto sem imela poseben graf kar pa ni bilo najbolj pregledno tako da sem vse podatke prikazala na enem. Napisala bom še funkcijo ki tam kjer ni podatka v tabeli vzame enako vrednost kot leto prej/potem ali pa da tam črte ni. Trenutno sem namestila da "NA" vrednosti enači s številom 0, kar pa mi naredi graf nepregleden. Naredila sem tudi grafa ki prikazujeta prodajo avtomobilov v različnih državah in pa produkcijo posameznih modelov s pomočjo katerih bom napovedala podatke za prihodnost po metodi najmanjših kvadratov. Za 3. fazo bom še ugotovila zakaj mi zemljevidov ne prikaže v pdf datoteki.
 
-%\includegraphics{../slike/naselja.pdf}
+23.9.2015: Odločila sem se za drugačno metodo risanja grafov, kjer sem dodala še napovedi za prihodnost glede na podatke ki sem jih imela. Najprej sem si pripravila zadeve za x in y osi in pretvarjala podatke v vektorje iz prejšnje oblike - besedila. Za napovedne krivulje sem s pomočjo interneta našla formulo ki išče kvadratno funkcijo katera se najbolje prilega danim točkam in z malo truda na krivulje napisala še funkcijski predpis. Na koncu je bilo lahko narisati oba grafa s prej pripravljenimi funkcijami.
+
+\includegraphics[width=\textwidth]{../slike/Auditrgianaliza.pdf}
+
+Iz danih grafov lahko predvidimo, da bo prodaja v nekaterih državah porasla, v drugih pa se zmanjšala. Kot tudi za proizvodnjo določenih modelov avtomobilov.
 
 \end{document}
