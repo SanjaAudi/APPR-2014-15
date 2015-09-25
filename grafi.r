@@ -1,5 +1,4 @@
 source("podatki2faza/konzola.r")
-source("grafi.r")
 
 g1 <- apply(AudiByMarkets,1,function(y) y[1])
 g1 <- g1[!is.na(g1)]
