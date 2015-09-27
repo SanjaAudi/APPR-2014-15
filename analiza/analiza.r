@@ -1,5 +1,3 @@
-source("podatki2faza/konzola.r")
-
 pdf("slike/Auditrgianaliza.pdf")
 
 pripraviVrstico <- function(podatki) {

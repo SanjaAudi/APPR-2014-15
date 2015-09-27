@@ -1,13 +1,9 @@
-source("podatki2faza/konzola.r")
-source("grafi.r")
-
 g1 <- apply(AudiByMarkets,1,function(y) y[1])
 g1 <- ag1[!is.na(g1)]
 
 
 
 pdf("slike/Audi_trgi.pdf")
-
 
 g_range <- range(0)
 izbrani <- c(1, 4, 5, 6, 12, 13)
